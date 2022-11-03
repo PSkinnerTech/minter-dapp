@@ -7,21 +7,23 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "YOUR COLLECTION NAME";
-const description = "Remember to replace this description";
+const namePrefix = "AGAMI #EndModernSlavery";
+const description = "This is NOT an Awareness Project."
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 5000,
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Rising Logo" },
+      { name: "Hashtag" },
+      { name: "Skyline" },
+      { name: "Warrior Hoodie" },
+      { name: "Tattoo" },
+      { name: "NOA Patch" },
+      { name: "Watch" },
+      { name: "AGAMI Coin" },
     ],
   },
 ];
@@ -31,13 +33,13 @@ const shuffleLayerConfigurations = true;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 2048,
+  height: 2048,
   smoothing: false,
 };
 
 const extraMetadata = {
-  external_url: "https://codecats.xyz", // Replace with your website or remove this line if you do not have one.
+  external_url: "https://agamico.com", // Replace with your website or remove this line if you do not have one.
 };
 
 // NFTPort Info
@@ -48,17 +50,17 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'goerli'; // only goerli, polygon, or ethereum
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'CRYPTOPUNKS';
-const CONTRACT_SYMBOL = 'CP';
+const CONTRACT_NAME = 'AGAMI #EndModernSlavery';
+const CONTRACT_SYMBOL = 'EMS';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
-const OWNER_ADDRESS = 'YOUR WALLET ADDRESS HERE';
-const TREASURY_ADDRESS = 'YOUR WALLET ADDRESS HERE';
+const OWNER_ADDRESS = '0x5eB1b0B5f42BdD0402f77B0d27E914745b4dAFfD';
+const TREASURY_ADDRESS = '0x5eB1b0B5f42BdD0402f77B0d27E914745b4dAFfD';
 const MAX_SUPPLY = 5000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const MINT_PRICE = 0.01; // Minting price per NFT. Goerli = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
-const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
+const MINT_PRICE = 0.065; // Minting price per NFT. Goerli = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const TOKENS_PER_MINT = 100; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2022-03-20T11:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2022-11-04T23:30:48+00:00"; // This is required. Eg: 2022-11-04T23:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
@@ -74,8 +76,8 @@ let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually inclu
 // Generic Metadata is optional if you want to reveal your NFTs
 const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "REPLACE THIS"; // Replace with what you want the generic descriptions to say.
-const GENERIC_IMAGE = "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh"; // Replace with your generic image that will display for all NFTs pre-reveal.
+const GENERIC_DESCRIPTION = "Mint this NFT to get early access to the AGAMI Watch Founders Line Drop and other future NOA Tagged™ swag.  The total value of what you paid for this NFT will be applied to the purchase of your first AGAMI phygital product.  Multiple AGAMI #EndModernSlavery NFTs can be combined for a total value of a single, or multiple, AGAMI phygital products.  The NFTs cannot be reused after they've been used for the purchase of a phygital product.  This NFT will also grant access into AGAMI's exclusive Discord Channels.  10% of proceeds and 5% of royalties will go to a non-profit that targets human trafficking specially selected by the AGAMI community.  If this NFT contains a gold item (gold watch, gold glow, gold sweater, gold rising logo, and/or gold coin), then the mintor will receive a free phygital item.  Gold Watch = 1 Free AGAMI Founders Line Watch.  Gold Glow = 2 Free Tickets to Any AGAMI Event or Event that the AGAMI team is officially attending.  Gold Sweater = 1 Free Organic AGAMI Hoodie with embedded NOA Tag™.  Gold Coin = 1 Free AGAMI Coin with NOA Tag™. Gold Rising Logo = 1 Free license to use AGAMI NOA Tags™ for your own products."; // Replace with what you want the generic descriptions to say.
+const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafybeigb3jnnvry55u6wiog6c35crikh6huwjysm2notyhb6ki2ie7mm7y"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
 try {
